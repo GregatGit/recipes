@@ -7,7 +7,11 @@ class RecipeList extends Component {
   renderList = () => {
     return this.props.recipes.map((recipe) => {
       return (
-        <li key={recipe.name} className='list-group-item'>{recipe.name}</li>
+        <li
+          key={recipe.name}
+          onClick={() => this.props.selectRecipe(recipe)}
+          className='list-group-item'>{recipe.name}
+        </li>
       )
     })
   }
@@ -28,9 +32,9 @@ function mapStateToProps (state) {
   }
 }
 // any thing return from this will end up as props on the recipeList container
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps  (dispatch) {
   // whenever selectRecipe is called , the result passes to all our reducers
   return bindActionCreators({ selectRecipe: selectRecipe }, dispatch)
 }
-
+// promote recipelist from a component to a conatianer - it needs to know about this dispatch method, selectrecipe. make it available as a prop
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeList)
