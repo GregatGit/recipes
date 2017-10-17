@@ -22,8 +22,9 @@
         "name": "cornflakes",
         "ingredients-list": [
             "milk",
-            "cornflakes"
+            "cornflakes",
+            "sugar"
         ],
-        "ingredients": 2
+        "ingredients": 3
     }
 ]
