@@ -10,6 +10,7 @@ class RecipeDetail extends Component {
       <div>
         <h3>Details for:</h3>
         <div>{this.props.recipe.name}</div>
+        <div>Number of Ingredients: {this.props.recipe.ingredients}</div>
       </div>
     )
   }
