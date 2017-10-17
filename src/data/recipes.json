@@ -1,23 +1,29 @@
 [
     {
-        "cake": [
+        "name": "cake",
+        "ingredients-list": [
             "eggs",
             "flour",
             "butter",
             "sugar",
             "salt"
-        ]
+        ],
+        "ingredients": 5
     },
     {
-        "jam": [
+        "name": "jam",
+        "ingredients-list": [
             "strawberries",
             "sugar"
-        ]
+        ],
+        "ingredients": 2
     },
     {
-        "cornflakes": [
+        "name": "cornflakes",
+        "ingredients-list": [
             "milk",
             "cornflakes"
-        ]
+        ],
+        "ingredients": 2
     }
 ]
