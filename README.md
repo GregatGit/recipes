@@ -1,6 +1,6 @@
-## Recipe-Box
+# Recipe-Box
 by Greg Duncan
-# A freeCodeCamp challenge
+## A freeCodeCamp challenge
 
 I have used CRA and followed Stehpen Grider's React and Redux to course to create this app.
 
