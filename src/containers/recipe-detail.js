@@ -3,14 +3,20 @@ import { connect } from 'react-redux'
 
 class RecipeDetail extends Component {
   render() {
+    console.log('rd',this.props)
     if (!this.props.recipe) {
       return <div>Select a book to get started</div>
     }
+    const name = this.props.recipe
     return (
       <div>
-        <h3>Details for:</h3>
-        <div>{this.props.recipe.name}</div>
-        <div>Number of Ingredients: {this.props.recipe.ingredients}</div>
+        <h3>Details for: {name}</h3>
+        <ul>{ this.props.recipes[name].ingredients_list.map((ingredient) => {
+          return (
+            <li>{ingredient}</li>
+          )
+        }) }</ul>
+        
       </div>
     )
   }
@@ -18,7 +24,8 @@ class RecipeDetail extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    recipe: state.activeRecipe
+    recipe: state.activeRecipe,
+    recipes: state.recipes
   }
 }
 

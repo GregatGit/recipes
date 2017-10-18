@@ -5,12 +5,13 @@ import { selectRecipe } from '../actions/index'
 
 class RecipeList extends Component {
   renderList = () => {
-    return this.props.recipes.map((recipe) => {
+    const names = Object.keys(this.props.recipes)
+    return names.map((recipe) => {
       return (
         <li
-          key={recipe.name}
+          key={recipe}
           onClick={() => this.props.selectRecipe(recipe)}
-          className='list-group-item'>{recipe.name}
+          className='list-group-item'>{recipe}
         </li>
       )
     })
