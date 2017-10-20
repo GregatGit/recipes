@@ -13,7 +13,7 @@ class RecipeDetail extends Component {
         <h3>Details for: {name}</h3>
         <ul>{ this.props.recipes[name].ingredients_list.map((ingredient) => {
           return (
-            <li>{ingredient}</li>
+            <li key={ingredient}>{ingredient}</li>
           )
         }) }</ul>
         
