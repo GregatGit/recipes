@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { selectRecipe } from '../actions/index'
+import RecipeDetail from './recipe-detail'
+import { Link } from 'react-router-dom'
 
 class RecipeList extends Component {
   renderList = () => {
@@ -19,9 +21,15 @@ class RecipeList extends Component {
 
   render() {
     return (
-      <ul className='list-group col-sm-4'>
-        {this.renderList()}
-      </ul>
+      <div>    
+        <ul className='list-group col-sm-4'>
+          {this.renderList()}
+        </ul>
+        <RecipeDetail />
+        <Link className='btn btn-primary' to='/new' >
+        Add a Recipe
+      </Link>
+      </div>
     )
   }
 }

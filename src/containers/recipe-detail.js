@@ -5,7 +5,7 @@ class RecipeDetail extends Component {
   render() {
     console.log('rd',this.props)
     if (!this.props.recipe) {
-      return <div>Select a book to get started</div>
+      return <div>Select a recipe to view ingredients</div>
     }
     const name = this.props.recipe
     return (
@@ -15,8 +15,7 @@ class RecipeDetail extends Component {
           return (
             <li key={ingredient}>{ingredient}</li>
           )
-        }) }</ul>
-        
+        }) }</ul>       
       </div>
     )
   }
